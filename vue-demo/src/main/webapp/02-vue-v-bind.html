@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <a v-bind:href="url">click</a>
+
+  <input v-model="url">
+
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+
+  //1.创建vue核心对象
+  new Vue({
+    el:"#app",
+    data:{
+      username:"",
+      url:"https://www.google.com"
+    }
+  })
+
+
+</script>
+
+</body>
+</html>

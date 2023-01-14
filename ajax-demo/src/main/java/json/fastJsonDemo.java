@@ -1,0 +1,22 @@
+package json;
+
+import com.alibaba.fastjson.JSON;
+
+public class fastJsonDemo {
+    public static void main(String[] args) {
+        //1.将java对象转为json字符串
+        User user = new User();
+        user.setId(1);
+        user.setUsername("zs");
+        user.setPassword("123");
+
+        String jsonString = JSON.toJSONString(user);
+        System.out.println(jsonString);//{"id":1,"password":"123","username":"zs"}
+
+        //2.将json字符串转为java对象
+        User u = JSON.parseObject("{\"id\":1,\"password\":\"123\",\"username\":\"zs\"}", User.class);
+        System.out.println(u);
+
+
+    }
+}
